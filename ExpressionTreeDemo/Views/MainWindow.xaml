@@ -23,15 +23,15 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <TextBlock Text="Name:"/>
-            <TextBox Width="90"/>
+            <TextBox Width="90" Text="{Binding Name}"/>
         </StackPanel>
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <TextBlock Text="Age:"/>
-            <TextBox Width="30"/>
+            <TextBox Width="30" Text="{Binding MinAge}"/>
             <TextBlock Text="-"/>
-            <TextBox Width="30"/>
+            <TextBox Width="30" Text="{Binding MaxAge}"/>
         </StackPanel>
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
@@ -43,19 +43,20 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <TextBlock Text="Salary:"/>
-            <TextBox Width="30"/>
+            <TextBox Width="30" Text="{Binding MinSalary}"/>
             <TextBlock Text="-"/>
-            <TextBox Width="30"/>
+            <TextBox Width="30" Text="{Binding MaxSalary}"/>
         </StackPanel>
         <StackPanel Grid.Row="4"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
             <TextBlock Text="IsMarried:"/>
-            <CheckBox/>
+            <CheckBox IsChecked="{Binding IsMarried}"/>
         </StackPanel>
         <Button Grid.Row="5" 
                 Width="60"
-                Content="Submit"/>
+                Content="Submit"
+                Command="{Binding Command_Fun}" CommandParameter="submit"/>
         <DataGrid Grid.Row="6" 
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
